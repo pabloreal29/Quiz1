@@ -17,6 +17,7 @@ struct Quiz1App: App {
         WindowGroup {
             QuizzesListView()
                 .environmentObject(quizzesModel)
+                .environmentObject(scoresModel)
         }
     }
 }

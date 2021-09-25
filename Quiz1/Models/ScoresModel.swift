@@ -8,15 +8,24 @@
 import Foundation
 
 class ScoresModel: ObservableObject {
-    @Published private(set) var acertadas: Set<Int> = []
+    //Comentada porque tiraba error
+//    @Published private(set) var acertadas: Set<Int> = []
+    var acertadas: Set<Int> = []
     
-    func check(respuesta: String, quiz: QuizItem) {
-        func check(respuesta: String, quiz: QuizItem) {
-            let r1 = respuesta.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
-            let r2 = quiz.answer.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
-            if r1 == r2 {
-                acertadas.insert(quiz.id)
-            }
+//    func check(respuesta: String, quiz: QuizItem) {
+//        func check(respuesta: String, quiz: QuizItem) {
+//            let r1 = respuesta.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+//            let r2 = quiz.answer.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+//            if r1 == r2 {
+//                acertadas.insert(quiz.id)
+//            }
+//        }
+//    }
+    
+    func check(answer: String, quiz: QuizItem) {
+        let quizAnswer = quiz.answer.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        if answer == quizAnswer {
+            acertadas.insert(quiz.id)
         }
     }
 }
