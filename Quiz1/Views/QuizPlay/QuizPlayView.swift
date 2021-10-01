@@ -22,6 +22,7 @@ struct QuizPlayView: View {
             VStack(alignment: .center, spacing: 20){
             Text(quiz.question)
                 .font(.title2)
+                .bold()
                 .frame(width: 350, height: 70, alignment: .top)
             TextField("Respuesta", text:$answer, onCommit: {
                 showAlert = true

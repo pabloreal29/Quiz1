@@ -14,6 +14,7 @@ struct QuizRowView: View {
             HStack{
                 Text(quiz.question)
                     .font(.title2)
+                    .bold()
                     .frame(width: 200, height: 20)
                 //Si es favorita, pintamos good, si no, pintamos bad
                 Image(quiz.favourite ? "good": "bad")
